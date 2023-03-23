@@ -88,7 +88,6 @@ resource "azurerm_kubernetes_cluster_node_pool" "user_node_pools" {
   name                  = each.key
   mode                  = each.value.mode
   vm_size               = each.value.vm_size
-  availability_zones    = each.value.zones
   max_pods              = each.value.user_max_pods
   os_disk_size_gb       = each.value.user_os_size
   os_type               = each.value.node_os
