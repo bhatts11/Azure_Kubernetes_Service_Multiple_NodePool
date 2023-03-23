@@ -130,7 +130,6 @@ variable "user_node_pool" {
   type = map(object({
     mode              = string
     vm_size           = string
-    zones             = list(string)
     user_max_pods     = number
     user_os_size      = number
     node_os           = string
