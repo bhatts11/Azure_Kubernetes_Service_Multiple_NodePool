@@ -20,29 +20,30 @@ min_count                 = 1
 max_count                 = 1
 
 
-  user_node_pools = {
-    pool2 = {
-      mode            = "User"
-      vm_size         = "Standard_D2_v3"
-      zones           = ["1", "2", "3"]
-      user_max_pods   = 110
-      user_os_size    = 128
-      node_os         = "Windows"
-      user_auto_scaling = true
-      user_min_count  = 1
-      user_max_count  = 1
-    }
+#   user_node_pools = {
+#     pool2 = {
+#       mode            = "User"
+#       vm_size         = "Standard_D2_v3"
+#       zones           = ["1", "2", "3"]
+#       user_max_pods   = 110
+#       user_os_size    = 128
+#       node_os         = "Windows"
+#       user_auto_scaling = true
+#       user_min_count  = 1
+#       user_max_count  = 1
+#     }
     
-    pool3 = {
-      mode            = "User"
-      vm_size         = "Standard_D4s_v3"
-      zones           = ["1", "2"]
-      user_max_pods   = 50
-      user_os_size    = 256
-      node_os         = "Windows"
-      user_auto_scaling = true
-      user_min_count  = 1
-      user_max_count  = 1
-    }
-  }
+#     pool3 = {
+#       mode            = "User"
+#       vm_size         = "Standard_D4s_v3"
+#       zones           = ["1", "2"]
+#       user_max_pods   = 50
+#       user_os_size    = 256
+#       node_os         = "Windows"
+#       user_auto_scaling = true
+#       user_min_count  = 1
+#       user_max_count  = 1
+#     }
+#   }
   
+user_node_pools =  "{"pool2" : { "mode" : "User", "vm_size" : "Standard_D2_v3", "user_max_pods" : 110, "user_os_size" : 128, "node_os" : "Windows", "user_auto_scaling" : "true", "user_min_count" : 1, "user_max_count" : 1}}"
